@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="marcuslogo-Photoroom.png" alt="Marcus Grant Logo" class="logo">
+        <img src="file.png" id="menuButton" alt="Menu Logo" class="menu-button">
+    </header>
+    <nav id="menu" class="hidden">
+        <ul>
+            <li><a href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+            <li><a href="projects.html" data-en="Projects" data-ja="プロジェクト">Projects</a></li>
+            <li><a href="AboutMe.html" data-en="About Me" data-ja="私について">About Me</a></li>
+            <li><a href="#" data-en="Contact" data-ja="連絡先">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="text-and-image">
+                    <div class="text-content">
+                        <p class="subheading" data-en="- Mobile / Web Developer" data-ja="- モバイル / ウェブ開発者">- Mobile / Web Developer</p>
+                        <h1 data-en="A Difference of Perspective" data-ja="視点の違い">A Difference of Perspective</h1>
+                        <p class="description" data-en="I am Marcus Grant, a Web / iOS Developer passionate about software development and problem solving." data-ja="私はMarcus Grantです。ソフトウェア開発と問題解決に情熱を注ぐWeb / iOS開発者です。">I am Marcus Grant, a Web / iOS Developer passionate about software development and problem solving.</p>
+                        <div class="buttons">
+                            <a href="projects.html" class="button primary" data-en="Projects" data-ja="プロジェクト">Projects</a>
+                            <a href="https://github.com/marcusgrant94" class="button secondary" data-en="Learn More" data-ja="もっと知る">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="image-content">
+                        <img src="passport-photo.jpg" alt="Your Image">
+                    </div>
+                </div>
+                <div class="carousel-section">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="Space Black.png" alt="Image 1">
+                            <img src="screenshot5.PNG" alt="Image 2">
+                            <img src="screenshot1.jpg" alt="Image 2">
+                            <img src="screenshot6.jpg" alt="Image 1">
+                            <img src="screenshot2.jpg" alt="Image 3">
+                            <img src="screenshot4.jpg" alt="Image 1">
+                            <img src='screenshot3.jpg' alt="Image 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Marcus Grant</p>
+        <button id="langSwitch" class="lang-button">日本語</button>
+    </footer>
+</body>
+</html>

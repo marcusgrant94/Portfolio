@@ -1,0 +1,246 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #101010; /* Dark background color */
+    color: #ffffff; /* Text color for better contrast */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Ensure the main content takes up the available space */
+main {
+    flex: 1;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #101010; /* Match the dark background color */
+    padding: 2em;
+}
+
+.logo {
+    height: 50px; /* Adjust the height as needed */
+    margin-left: 20px;
+}
+
+.project-header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px; /* Adjust the height as needed */
+}
+
+.menu-button {
+    height: 25px; /* Adjust the height to make the button smaller */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 20px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 1001; /* Ensure it is on top of the menu */
+    position: relative;
+}
+
+.project {
+    padding: 2em;
+    color: #ffffff; /* Adjust text color */
+    background-color: #101010; /* Match background color */
+    margin-bottom: 4em; /* Add space between projects */
+}
+
+.project-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2em;
+    opacity: 0;
+    transform: translateY(20px); /* Reduce the initial transform distance */
+    animation: fadeInUp 0.5s forwards;
+}
+
+.project-description {
+    width: 50%;
+    padding-right: 2em;
+}
+
+.project-description h2 {
+    font-size: 1.5em;
+    color: #f8f8f8; /* Highlighted text color */
+}
+
+.project-description h3 {
+    font-size: 1.2em;
+    margin-top: 1em;
+    color: #ffffff; /* Highlighted text color */
+}
+
+.project-description p {
+    font-size: 1em;
+    color: #aaaaaa; /* Adjusted text color */
+}
+
+.project-description ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #ffffff; /* Color of bullet points */
+}
+
+.project-description ul li {
+    margin-bottom: 0.5em; /* Space between list items */
+}
+
+.project-images {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    opacity: 0;
+    transform: translateY(20px); /* Reduce the initial transform distance */
+    animation: fadeInUp 0.5s forwards;
+}
+
+.project-images img {
+    width: 190px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Slight rounding for aesthetics */
+}
+
+.lang-button {
+    background-color: #333333; /* Dark background */
+    color: #ffffff; /* Light text */
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 20px;
+    transition: background-color 0.3s;
+    float: right;
+}
+
+.lang-button:hover {
+    background-color: #555555; /* Slightly lighter on hover */
+}
+
+footer {
+    background-color: #101010; /* Match the dark background color */
+    color: #aaaaaa;
+    text-align: center;
+    padding: 1em;
+    position: sticky;
+    bottom: 0;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons2 {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    margin-top: 2em;
+}
+
+.button.primary2 {
+    background-color: #f0e68c; /* Light color for primary button */
+    color: #101010; /* Dark text color */
+    text-decoration: none;
+    padding: 0.75em 1.5em;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button.primary2:hover {
+    opacity: 0.8;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with some transparency */
+    z-index: 999; /* Ensure it is on top of other elements */
+    opacity: 0;
+    animation: fadeIn 0.5s forwards, slideIn 0.5s forwards;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu li {
+    margin: 1em 0;
+}
+
+#menu a {
+    text-decoration: none;
+    font-size: 2em;
+    color: #555555; /* Default color for menu items */
+    transition: color 0.3s;
+}
+
+#menu a:hover {
+    color: white; /* Hover color */
+}
+
+#menu a.active {
+    color: #ffffff; /* Active link color */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-description, .project-images {
+        width: 100%;
+        padding: 0;
+    }
+
+    .project-images {
+        justify-content: center;
+    }
+}
+
+
+
+
