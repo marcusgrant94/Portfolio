@@ -145,6 +145,7 @@ footer {
     display: flex;
     justify-content: flex-start; /* Align buttons to the left */
     margin-top: 2em;
+    gap: 1em;
 }
 
 .button.primary2 {
