@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How I built RealTime</title>
+  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="stylesheet" href="RealTimeBlog.css" />
+  <script src="Blog.js" defer></script>
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header>
+    <a href="index.html">
+      <img src="marcuslogo-Photoroom.png" alt="Marcus Grant Logo" class="logo">
+    </a>
+    <img src="file.png" id="menuButton" alt="Menu Logo" class="menu-button">
+  </header>
+  <nav id="menu" class="hidden">
+    <ul>
+      <li><a href="index.html"    data-en="Home"      data-ja="ホーム">Home</a></li>
+      <li><a href="projects.html" data-en="Projects"  data-ja="プロジェクト">Projects</a></li>
+      <li><a href="AboutMe.html"  data-en="About Me"  data-ja="私について">About Me</a></li>
+      <li><a href="Blog.html"     data-en="Blog"      data-ja="ブログ">Blog</a></li>
+      <li><a href="RealTimeBlog.html" class="active" data-en="RealTime" data-ja="RealTime">RealTime</a></li>
+      <li><a href="#"             data-en="Contact"   data-ja="連絡先">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="post">
+      <header class="post-header fadeInUp" style="animation-delay: 0.1s;">
+        <h1
+          data-en="How I built RealTime"
+          data-ja="RealTimeを構築する方法"
+        >How I built RealTime</h1>
+      </header>
+
+      <div class="post-image fadeInUp" style="animation-delay: 0.2s;">
+        <img src="applogo.png" alt="RealTime Logo">
+        <p class="post-date"
+           data-en="August 5, 2025"
+           data-ja="2025年8月5日"
+        >August 5, 2025</p>
+      </div>
+
+      <article class="post-content fadeInUp" style="animation-delay: 0.3s;">
+        <p data-en="Long story short, I built RealTime to let friends share temporary stories…"
+           data-ja="結論から言うと、RealTimeは友達が一時的なストーリーを共有できるように構築しました…">
+          Long story short, I built RealTime to let friends share temporary stories…
+        </p>
+
+        <h2 data-en="Why temporary stories?" data-ja="なぜ一時的なストーリーか？">
+          Why temporary stories?
+        </h2>
+        <p>
+          It seemed everyone was craving more genuine, in-the-moment sharing—so I built RealTime to expire posts after 30 minutes, keeping the feed fresh and authentic.
+        </p>
+
+        <!-- Add more sections here -->
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Marcus Grant</p>
+    <button id="langSwitch" class="lang-button">日本語</button>
+  </footer>
+</body>
+</html>
+
+

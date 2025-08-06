@@ -1,0 +1,48 @@
+/* Fade-in-up keyframes (redeclared to ensure availability) */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Utility class for fade-in-up */
+  .fadeInUp {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+  }
+  
+  /* Center the “Coming Soon” title */
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  /* Style the section */
+  .coming-soon {
+    padding: 2em;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Title styling */
+  .coming-soon h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  /* Responsive tweak */
+  @media (max-width: 768px) {
+    .coming-soon h1 {
+      font-size: 2.25rem;
+    }
+  }
+  
+  

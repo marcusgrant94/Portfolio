@@ -1,42 +1,43 @@
-body {
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-    background-color: #000000;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #101010; /* Dark background color */
+    color: #ffffff; /* Text color for better contrast */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Ensure the main content takes up the available space */
+main {
+    flex: 1;
 }
 
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    justify-content: space-between;
+    background-color: #101010; /* Match the dark background color */
+    padding: 2em;
 }
 
 .logo {
-    height: 50px;
+    height: 50px; /* Adjust the height as needed */
+    margin-left: 20px;
 }
 
 .menu-button {
-    height: 30px;
-    cursor: pointer;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
+    height: 25px; /* Adjust the height to make the button smaller */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 20px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 1001; /* Ensure it is on top of the menu */
+    position: relative;
 }
 
 .about-hero {
@@ -48,44 +49,234 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position for animation */
+    animation: fadeInUp 0.5s forwards;
+    animation-delay: 0.1s; /* Adjust delay as needed */
 }
 
 .hero-image {
-    max-width: 30%;
+    max-width: 43%;
     height: auto;
 }
 
-.quote {
-    background-color: rgba(0, 0, 0, 0.7);
+.quote-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #101010;
     color: #fff;
     padding: 20px;
     border-radius: 10px;
-    margin-top: -50px;
-    max-width: 800px;
-    position: relative;
+    margin-top: 2px;
     z-index: 1;
     font-size: 1.2em;
     font-style: italic;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position for animation */
+    animation: fadeInUp 0.5s forwards;
+    animation-delay: 0.2s; /* Slightly delayed compared to hero-content */
 }
 
 .about-me {
     padding: 50px 20px;
-    background-color: #000;
-    color: #fff;
+    background-color: #101010;
+    color: #aaaaaa;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position for animation */
+    animation: fadeInUp 0.5s forwards;
+    animation-delay: 0.3s; /* Further delayed compared to quote-container */
 }
 
 .about-content {
     max-width: 800px;
     margin: 0 auto;
+    margin-top: -5%;
     font-size: 1.1em;
     line-height: 1.6;
 }
 
 .about-content p {
-    text-align: left;
+    text-align: justify; /* Change to justify alignment */
+    margin-bottom: 1.5em; /* Add margin bottom for spacing */
+}
+
+.contact-me {
+    max-width: 755px;
+    margin: 40px auto 0; /* Add margin to top for separation */
+    text-align: center; /* Center the buttons */
+    padding: 50px 20px;
+    background-color: #101010;
+    color: #ffffff;
+    border-top: 1px solid #aaaaaa; /* Add a thin line at the top */
+}
+
+.contact-me h2 {
+    font-size: 2em;
+    margin-top: -1%;
+    margin-bottom: 20px;
+    text-align: left; /* Align "Contact Me" text to the left */
+}
+
+.contact-me p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #cccccc;
+    text-align: left; /* Align paragraph text to the left */
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #f0e68c;
+    color: #101010;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-button span {
+    margin-right: 10px;
+}
+
+.view-work-experience {
+    display: block;
+    font-size: 1em;
+    color: #f0e68c;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 50px; /* Add margin bottom to separate from footer */
 }
 
 footer {
     background-color: #101010; /* Match the dark background color */
-    c
+    color: #aaaaaa;
+    text-align: center;
+    padding: 1em;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang-button {
+    background-color: #333333; /* Dark background */
+    color: #ffffff; /* Light text */
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 30px;
+    transition: background-color 0.3s;
+    float: right;
+}
+
+.lang-button:hover {
+    background-color: #555555; /* Slightly lighter on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with some transparency */
+    z-index: 999; /* Ensure it is on top of other elements */
+    opacity: 0;
+    animation: fadeIn 0.5s forwards, slideIn 0.5s forwards;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu li {
+    margin: 1em 0;
+}
+
+#menu a {
+    text-decoration: none;
+    font-size: 2em;
+    color: #555555; /* Default color for menu items */
+    transition: color 0.3s;
+}
+
+#menu a:hover {
+    color: white; /* Hover color */
+}
+
+#menu a.active {
+    color: #ffffff; /* Active link color */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Reduce the initial transform distance */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-and-image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content, .carousel-section {
+        max-width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        margin-bottom: 1em;
+    }
+
+    .carousel-images img {
+        width: 100px; /* Adjust the width for smaller screens */
+        height: 100px; /* Adjust the height for smaller screens */
+    }
+}
+
+
+
+
+
+
+

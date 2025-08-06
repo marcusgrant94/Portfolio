@@ -1,0 +1,129 @@
+/* fadeInUp keyframes (portfolio.css may already have it) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* reusable fadeInUp utility */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+/* Base padding for the blog page */
+.blog {
+  padding: 2em;
+}
+
+/* Center header & cards in the same 650px column */
+.blog-header,
+.blog-cards {
+  max-width: 1150px;        /* matches your card max-width */
+  margin: 0 auto 1.5em;    /* center + bottom gap */
+  padding: 0 1em;          /* inner gutter */
+}
+
+/* Blog header styling */
+.blog-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.blog-header h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.3em;
+}
+
+.blog-header .subtitle {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+/* Card grid now constrained by the column wrapper */
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+}
+
+/* Card styling */
+.card {
+  max-width: 650px;
+  background: #181818;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;  /* for fadeInUp */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 1em;
+  flex: 1;
+}
+
+.card-content h2 {
+  font-size: 1.2rem;
+  color: #f0e68c;
+  margin-bottom: 0.5em;
+}
+
+.card-content p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Link wrapper so the whole card is clickable */
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.card-link:hover .card {
+  transform: translateY(-4px);
+  transition: transform 0.2s;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .blog {
+    padding: 1em;
+  }
+
+  .blog-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .card-content h2 {
+    font-size: 1rem;
+  }
+
+  .blog-header,
+  .blog-cards {
+    max-width: none;
+    padding: 0 1em;
+    margin-bottom: 1em;
+  }
+}
+
+  
+  
+  
+  

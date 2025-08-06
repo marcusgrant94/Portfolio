@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog</title>
+  <!-- your main styles + blog overrides -->
+  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="stylesheet" href="Blog.css" />
+  <script src="Blog.js" defer></script>
+</head>
+<body>
+  <!-- same header/nav as index.html -->
+  <header>
+    <a href="index.html">
+      <img src="marcuslogo-Photoroom.png" alt="Marcus Grant Logo" class="logo">
+    </a>
+    <img src="file.png" id="menuButton" alt="Menu Logo" class="menu-button">
+  </header>
+  <nav id="menu" class="hidden">
+    <ul>
+      <li><a href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+      <li><a href="projects.html" data-en="Projects" data-ja="プロジェクト">Projects</a></li>
+      <li><a href="AboutMe.html" data-en="About Me" data-ja="私について">About Me</a></li>
+      <li><a href="Blog.html" class="active" data-en="Blog" data-ja="ブログ">Blog</a></li>
+      <li><a href="#" data-en="Contact" data-ja="連絡先">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="blog">
+      <header class="blog-header">
+   <h1
+     data-en="My thought process behind my projects."
+     data-ja="私のプロジェクトの背後にある思考プロセス。">
+     My thought process behind my projects.
+   </h1>
+ </header>
+
+ <div class="blog-cards">
+  <!-- First card -->
+  <a href="comingsoon.html" class="card-link">
+    <article class="card fadeInUp" style="animation-delay: 0.1s;">
+      <img src="applogo.png" alt="App Logo">
+      <div class="card-content">
+        <h2 data-en="Engineering RealTime: From Idea to App Store" data-ja="リアルタイムの構築：アイデアからアプリストアへ">Engineering RealTime: From Idea to App Store</h2>
+        <p data-en="It started with a vision: make social media feel real again..." data-ja="それはビジョンから始まりました：ソーシャルメディアを再び本物に感じさせる...">It started with a vision: make social media feel real again...</p>
+      </div>
+    </article>
+  </a>
+  <!-- Second card -->
+  <a href="comingsoon.html" class="card-link">
+    <article class="card fadeInUp" style="animation-delay: 0.2s;">
+      <img src="ShoppingListAppIcon.png" alt="App logo">
+      <div class="card-content">
+        <h2 data-en="My First iOS App: Shopping List" data-ja="私の最初のiOSアプリ：ショッピングリスト">My First iOS App: Shopping List</h2>
+        <p data-en="Learning Swift from scratch, I had no idea what I was doing." data-ja="Swiftをゼロから学び、何をしているのか全くわかりませんでした。">Learning Swift from scratch, I had no idea what I was doing.</p>
+      </div>
+    </article>
+  </a>
+  <!-- Add more .card blocks as needed -->
+</div>
+    </section>
+  </main>
+
+  <!-- same footer as index.html -->
+  <footer>
+    <p>&copy; 2025 Marcus Grant</p>
+    <button id="langSwitch" class="lang-button">日本語</button>
+  </footer>
+</body>
+</html>
+

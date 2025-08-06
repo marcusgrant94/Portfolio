@@ -3,33 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Marcus Grant</title>
+    <title>About Me</title>
     <link rel="stylesheet" href="AboutMe.css">
+    <link rel="stylesheet" href="portfolio.css" />
     <script src="AboutMe.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="marcuslogo-Photoroom.png" alt="Marcus Grant Logo" class="logo">
+        <a href="index.html">
+            <img src="marcuslogo-Photoroom.png" alt="Marcus Grant Logo" class="logo">
+        </a>
         <img src="file.png" id="menuButton" alt="Menu Logo" class="menu-button">
     </header>
     <nav id="menu" class="hidden">
         <ul>
-            <li><a href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
-            <li><a href="projects.html" data-en="Projects" data-ja="プロジェクト">Projects</a></li>
-            <li><a href="AboutMe.html" data-en="About Me" data-ja="私について">About Me</a></li>
-            <li><a href="#" data-en="Contact" data-ja="連絡先">Contact</a></li>
+          <li><a href="index.html"   data-en="Home"      data-ja="ホーム">Home</a></li>
+          <li><a href="projects.html"data-en="Projects"  data-ja="プロジェクト">Projects</a></li>
+          <li><a href="AboutMe.html"  class="active" data-en="About Me" data-ja="私について">About Me</a></li>
+          <li><a href="Blog.html"     data-en="Blog"      data-ja="ブログ">Blog</a></li>
+          <li><a href="mailto:…"      data-en="Contact"   data-ja="連絡先">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
     <main>
         <section class="about-hero">
             <div class="hero-content">
-                <img src="your-custom-image.jpg" alt="About Me Hero Image" class="hero-image">
-                <div class="quote">
-                    <p>“We over estimate what we can do in a day but under estimate what we can achieve in a decade.”</p>
+                <img src="sunset.JPG" alt="About Me Hero Image" class="hero-image">
+                <div class="quote-container">
+                    <h2 class="quote" data-en="“We over estimate what we can do in a day but under estimate what we can achieve in a decade.”" data-ja="「私たちは一日にできることを過大評価し、十年で達成できることを過小評価します。」">
+                        “We over estimate what we can do in a day but under estimate what we can achieve in a decade.”
+                    </h2>
                 </div>
             </div>
         </section>
-
         <section class="about-me">
             <div class="about-content">
-                <p data-en="Software development and design are topics that continuously fascinate me. Even before my career began, I have always embraced a D.I.Y mentality, purposefully learning any skill necessary for whatever goal I wanted to achieve. I use this same philosophy to build beautiful websites and applications. Since I was young, I have been passionate a
+                <p data-en="Engineering and Technology are things that have always fascinated me. Even when i was a child, I've always loved building things, and I always loved having and learning about the new and latest Technology. Having this love for Technology and Engineering has driven me to build well crafted Mobile apps and websites for people to love and use in their daily lives." data-ja="工学とテクノロジーは常に私を魅了するものです。子供の頃から、物を作るのが大好きで、最新のテクノロジーについて学ぶことが大好きでした。このテクノロジーと工学への愛情が、日常生活で人々が愛し使うための高品質なモバイルアプリやウェブサイトを構築する原動力となっています。">
+                    Engineering and Technology are things that have always fascinated me...
+                </p>
+                <p data-en="At age 25, I decided to go to college to pursue my education as a Software Engineer. While in college, I continued to work on my craft as a Software Engineer by building multiple iOS apps and Websites. Working on my soft skills by interviewing for multiple companies for internship roles. And Interning for a small start up company located in the Bay Area. During this internship, I learned how to work on a team and communicate with other Engineers. I also learned how to use new Technologies like Github, Slack, Trello, etc.. I understand that great work requires dedication, and I strive to bring that value to every project and team." data-ja="25歳の時にソフトウェアエンジニアとしての教育を追求するために大学に行くことを決意しました。大学在学中は、複数のiOSアプリやウェブサイトを構築することでソフトウェアエンジニアとしての技術を磨き続けました。また、インターンシップの役割で複数の企業の面接を受け、ソフトスキルを磨きました。ベイエリアにある小さなスタートアップ企業でインターンシップを行い、このインターンシップ中にチームで働く方法や他のエンジニアとコミュニケーションを取る方法を学びました。また、Github、Slack、Trelloなどの新しいテクノロジーの使い方も学びました。素晴らしい仕事には献身が必要であり、その価値をすべてのプロジェクトやチームにもたらすよう努めています。">
+                    At age 25, I decided to go to college to pursue my education...
+                </p>
+                <p data-en="I found my love for Japanese culture during my time in college, so I also decided to pursue a Minor in the Japanese language. Ever since then, I set my goal to become fluent in the Japanese language, and to become a Software Engineer in Japan once I graduate college in the Fall of 2025. My aspiration is to bridge the gap between Japan and America through innovative engineering solutions and collaborative projects. I believe that by combining the technological advancements and unique perspectives from both cultures, we can create a more interconnected and forward-thinking world." data-ja="大学在学中に日本文化への愛情を見つけたため、日本語を副専攻として追求することを決意しました。それ以来、日本語を流暢に話せるようになることと、2025年秋に大学を卒業した後に日本でソフトウェアエンジニアになることを目標にしています。私の目標は、革新的なエンジニアリングソリューションと協力プロジェクトを通じて、日本とアメリカの間のギャップを埋めることです。両国の技術の進歩と独自の視点を組み合わせることで、より相互に結びつき、前向きな世界を創造できると信じています。">
+                    I found my love for Japanese culture during my time in college...
+                </p>
+                <p data-en="With my ability to integrate design and development, I am capable of handling projects independently while also collaborating effectively with designers, developers, and other stakeholders. I have discovered that the biggest challenge is not just coming up with new products, but finding individuals who can effectively communicate across different roles and professional backgrounds. In the rapidly evolving tech industry, it's crucial to have people who can serve as excellent collaborators and coordinators to create the best possible products." data-ja="デザインと開発を統合する能力を持っているため、プロジェクトを独立して処理することができ、デザイナー、開発者、その他の関係者と効果的に協力することもできます。最大の課題は新しい製品を考案することだけでなく、さまざまな役割や専門的背景を持つ人々と効果的にコミュニケーションを取ることができる人を見つけることだと気付きました。急速に進化する技術業界では、優れた協力者およびコーディネーターとしての役割を果たすことができる人々が、最高の製品を作り上げるために必要です。">
+                    With my ability to integrate design and development...
+                </p>
+                <p data-en="Today, while I spend my time in my final year of University, I spend my free time studying Japanese, staying updated on new and upcoming Technologies, and traveling. As I continue in this journey of life and tech, I search for the answer to the most infamous question of them all. What's next?" data-ja="今日、大学の最終学年を過ごしながら、自由時間には日本語を勉強し、新しいテクノロジーや今後のテクノロジーについての最新情報を入手し、旅行をしています。人生とテクノロジーの旅を続ける中で、最も有名な質問の答えを探しています。それは「次は何？」ということです。">
+                    Today, while I spend my time in my final year of University...
+                </p>
+            </div>
+            <div class="contact-me">
+                <h2 data-en="Contact Me" data-ja="お問い合わせ">Contact Me</h2>
+                <p data-en="For all inquiries, please use the option below. I will respond to you as soon as I can." data-ja="すべての問い合わせについては、以下のオプションを使用してください。できるだけ早く返信いたします。">
+                    For all inquiries, please use the option below. I will respond to you as soon as I can.
+                </p>
+                <a href="mailto:grantmarcus1994@gmail.com" class="contact-button">
+                    <span>📧</span> <span data-en="SEND AN EMAIL" data-ja="メールを送る">SEND AN EMAIL</span>
+                </a>
+            </div>
+            
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 Marcus Grant</p>
+        <button id="langSwitch" class="lang-button">日本語</button>
+    </footer>
+</body>
+</html>
+
